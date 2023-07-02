@@ -4,11 +4,11 @@ import plotly.express as px
 import streamlit as st
 import time
 
+st.set_page_config(page_title='India Census 2011 Info', page_icon='logo-g050300332_640.png', layout='wide')
 df = pd.read_csv('india.csv')
 list_of_state = df['State'].unique().tolist()
 list_of_state.insert(0, 'Overall India')
 
-st.set_page_config(layout='wide')
 st.title('India Census 2011 Visualization')
 
 st.subheader('*Note!* :sunglasses:')
